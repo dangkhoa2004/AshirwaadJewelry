@@ -38,26 +38,3 @@ CREATE TABLE Jewelry
     FOREIGN KEY (type_id) REFERENCES Type(id),
     FOREIGN KEY (gender_id) REFERENCES Gender(id)
 );
-
--- Tạo bảng Account
-CREATE TABLE Account
-(
-    id INT IDENTITY PRIMARY KEY,
-    username VARCHAR(255),
-    password VARCHAR(255),
-    avt VARCHAR(255),
-    name VARCHAR(255),
-    email VARCHAR(255),
-    phone VARCHAR(50),
-    sex VARCHAR(10),
-    status INT
-);
-
--- Thêm dữ liệu vào bảng Account
-INSERT INTO Account
-    (username, password, name, email, phone, sex, status)
-VALUES
-    ('admin', '123', 'Quản Trị Viên', 'khoacdpp02847@fpt.edu.vn', '0869938981', 'Male', 1),
-    ('user', '123', 'Người Dùng', 'khoacdpp02847@fpt.edu.vn', '0869938981', 'Male', 1);
-
-
